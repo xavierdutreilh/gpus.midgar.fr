@@ -2,9 +2,9 @@ const cheerio = require("cheerio")
 const fetch = require("node-fetch")
 const url = require("build-url")
 
-const gpuMap = {
-  rtx3080: "+fcat-4684+fv121-19183",
-  rtx3090: "+fcat-4684+fv121-19185",
+const gpuIds = {
+  rtx3080: 19183,
+  rtx3090: 19185,
 }
 
 const statusMap = {
@@ -14,10 +14,10 @@ const statusMap = {
 }
 
 exports.getOffers = async gpu => {
-  if (!gpuMap[gpu]) return []
+  if (!gpuIds[gpu]) return []
   const response = await fetch(
     url("https://www.ldlc.com", {
-      path: `/recherche/${gpuMap[gpu]}.html`,
+      path: `/recherche/+fcat-4684+fv121-${gpuIds[gpu]}.html`,
     })
   )
   if (!response.ok) return []

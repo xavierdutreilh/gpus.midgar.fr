@@ -1,7 +1,7 @@
 const fetch = require("node-fetch")
 const url = require("build-url")
 
-const gpuMap = {
+const gpuNames = {
   rtx3070: "RTX 3070",
   rtx3080: "RTX 3080",
   rtx3090: "RTX 3090",
@@ -14,7 +14,7 @@ const statusMap = {
 }
 
 exports.getOffers = async gpu => {
-  if (!gpuMap[gpu]) return []
+  if (!gpuNames[gpu]) return []
   const response = await fetch(
     url("https://api.nvidia.partners", {
       path: "edge/product/search",
@@ -23,7 +23,7 @@ exports.getOffers = async gpu => {
         limit: 100,
         locale: "fr-fr",
         manufacturer: "NVIDIA",
-        gpu: gpuMap[gpu],
+        gpu: gpuNames[gpu],
         category: "GPU",
       },
     })
@@ -31,7 +31,7 @@ exports.getOffers = async gpu => {
   if (!response.ok) return []
   const data = await response.json()
   const items =
-    data.searchedProducts.featuredProduct.gpu === gpuMap[gpu]
+    data.searchedProducts.featuredProduct.gpu === gpuNames[gpu]
       ? [
           data.searchedProducts.featuredProduct,
           ...data.searchedProducts.productDetails,
