@@ -19,7 +19,7 @@ describe("getOffers", () => {
     const products = await nvidia.getOffers("rtx3090")
     expect(fetch).toHaveBeenCalledTimes(1)
     expect(fetch).toHaveBeenCalledWith(
-      "https://api.nvidia.partners/edge/product/search?page=1&limit=100&locale=fr-fr&gpu=RTX%203090&category=GPU"
+      "https://api.nvidia.partners/edge/product/search?page=1&limit=100&locale=fr-fr&manufacturer=NVIDIA&gpu=RTX%203090&category=GPU"
     )
     expect(products).toMatchSnapshot()
   })

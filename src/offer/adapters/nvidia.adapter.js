@@ -7,6 +7,12 @@ const gpuMap = {
   rtx3090: "RTX 3090",
 }
 
+const statusMap = {
+  buy_now: "available",
+  gf_notify_me: "unavailable",
+  upcoming: "unavailable",
+}
+
 exports.getOffers = async gpu => {
   if (!gpuMap[gpu]) return []
   const response = await fetch(
@@ -16,6 +22,7 @@ exports.getOffers = async gpu => {
         page: 1,
         limit: 100,
         locale: "fr-fr",
+        manufacturer: "NVIDIA",
         gpu: gpuMap[gpu],
         category: "GPU",
       },
@@ -35,7 +42,7 @@ exports.getOffers = async gpu => {
       store: "nvidia",
       name,
       price,
-      status,
+      status: statusMap[status] || "unknown",
     })
   )
 }

@@ -5,13 +5,7 @@ Array [
   Object {
     "name": "NVIDIA GEFORCE RTX 3090",
     "price": "€1,549.00",
-    "status": "upcoming",
-    "store": "nvidia",
-  },
-  Object {
-    "name": "ASUS TUF-RTX3090-24G-GAMING",
-    "price": "€1,839.90",
-    "status": "check_availability",
+    "status": "unavailable",
     "store": "nvidia",
   },
 ]

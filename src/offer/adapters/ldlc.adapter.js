@@ -7,6 +7,12 @@ const gpuMap = {
   rtx3090: "+fcat-4684+fv121-19185",
 }
 
+const statusMap = {
+  "+ de 15 jours": "available",
+  "En stock": "available",
+  Rupture: "unavailable",
+}
+
 exports.getOffers = async gpu => {
   if (!gpuMap[gpu]) return []
   const response = await fetch(
@@ -26,7 +32,9 @@ exports.getOffers = async gpu => {
         .trim()
         .replace(/\s+/g, ",")
         .replace(/^([0-9,]+)(€)(\d+)$/, "$2$1.$3")
-      const status = $(element).find(".modal-stock-web.stock").text().trim()
+      const status =
+        statusMap[$(element).find(".modal-stock-web.stock").text().trim()] ||
+        "unknown"
       return { store: "ldlc", name, price, status }
     })
     .toArray()
