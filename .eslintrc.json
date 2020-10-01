@@ -6,6 +6,7 @@
     "prettier"
   ],
   "rules": {
+    "consistent-return": ["error"],
     "node/no-unpublished-require": [
       "error",
       {

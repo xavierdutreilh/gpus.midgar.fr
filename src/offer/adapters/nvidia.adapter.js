@@ -28,7 +28,7 @@ exports.getOffers = async gpu => {
       },
     })
   )
-  if (!response.ok) return
+  if (!response.ok) return []
   const data = await response.json()
   const items =
     data.searchedProducts.featuredProduct.gpu === gpuMap[gpu]

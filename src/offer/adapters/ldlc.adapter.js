@@ -20,7 +20,7 @@ exports.getOffers = async gpu => {
       path: `/recherche/${gpuMap[gpu]}.html`,
     })
   )
-  if (!response.ok) return
+  if (!response.ok) return []
   const text = await response.text()
   const $ = cheerio.load(text)
   return $(".pdt-item")
