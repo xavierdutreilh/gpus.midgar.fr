@@ -20,7 +20,12 @@ exports.getOffers = async gpu => {
   return $(".pdt-item")
     .map((_, element) => {
       const name = $(element).find(".title-3").text().trim()
-      const price = $(element).find(".price .price").text().trim()
+      const price = $(element)
+        .find(".price .price")
+        .text()
+        .trim()
+        .replace(/\s+/g, ",")
+        .replace(/^([0-9,]+)(€)(\d+)$/, "$2$1.$3")
       const status = $(element).find(".modal-stock-web.stock").text().trim()
       return { store: "ldlc", name, price, status }
     })
