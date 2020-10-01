@@ -36,9 +36,11 @@ Test the application:
 npm test
 ```
 
-Build the application:
+Release the application:
 
 ```bash
+npm version major|minor|patch
+git push --follow-tags origin master
 VERSION=$(cat package.json | jq -r .version)
 docker build -t docker.pkg.github.com/xavierdutreilh/gpus.midgar.fr/api:$VERSION .
 docker push docker.pkg.github.com/xavierdutreilh/gpus.midgar.fr/api:$VERSION
