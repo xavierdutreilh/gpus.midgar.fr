@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getOffers retrieves ldlc offers 1`] = `
+Array [
+  Object {
+    "name": "ASUS GeForce TUF RTX 3090 24G GAMING",
+    "status": "Rupture",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "MSI GeForce RTX 3090 VENTUS 3X 24G OC",
+    "status": "Rupture",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "ASUS GeForce ROG STRIX RTX 3090 O24G GAMING",
+    "status": "Rupture",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "EVGA GeForce RTX 3090 XC3 BLACK GAMING",
+    "status": "Rupture",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "EVGA GeForce RTX 3090 XC3 GAMING",
+    "status": "Rupture",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "EVGA GeForce RTX 3090 FTW3 GAMING",
+    "status": "Rupture",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "EVGA GeForce RTX 3090 FTW3 ULTRA GAMING",
+    "status": "Rupture",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "MSI GeForce RTX 3090 GAMING X TRIO 24G",
+    "status": "Rupture",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "Gigabyte GeForce RTX 3090 EAGLE OC 24G",
+    "status": "Rupture",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "Palit GeForce RTX 3090 GamingPro",
+    "status": "Rupture",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "INNO3D GeForce RTX 3090 ICHILL X4 RGB",
+    "status": "+ de 15 jours",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "INNO3D GeForce RTX 3090 GAMING X3",
+    "status": "Rupture",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "ASUS GeForce TUF RTX 3090 O24G GAMING",
+    "status": "Rupture",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "KFA2 GeForce RTX 3090 SG (1-Click OC)",
+    "status": "+ de 15 jours",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "Gigabyte GeForce RTX 3090 GAMING OC 24G",
+    "status": "Rupture",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "EVGA GeForce RTX 3090 XC3 ULTRA GAMING",
+    "status": "Rupture",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "ZOTAC GeForce RTX 3090 TRINITY",
+    "status": "+ de 15 jours",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "INNO3D GeForce RTX 3090 ICHILL X3 RGB",
+    "status": "+ de 15 jours",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "Palit GeForce RTX 3090 GamingPro OC",
+    "status": "Rupture",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "Gainward GeForce RTX 3090 Phoenix GS (Golden Sample)",
+    "status": "Rupture",
+    "store": "ldlc",
+  },
+  Object {
+    "name": "Gainward GeForce RTX 3090 Phoenix",
+    "status": "Rupture",
+    "store": "ldlc",
+  },
+]
+`;

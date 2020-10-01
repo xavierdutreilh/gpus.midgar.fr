@@ -1,0 +1,29 @@
+{
+  "name": "gpus.midgar.fr",
+  "private": true,
+  "description": "The source code to gpus.midgar.fr",
+  "version": "0.0.0",
+  "author": "Xavier Dutreilh <xavier@dutreilh.com>",
+  "dependencies": {
+    "build-url": "^6.0.1",
+    "cheerio": "^1.0.0-rc.3",
+    "config": "^3.3.2",
+    "koa": "^2.13.0",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^9.4.0",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "jest-when": "^2.7.2",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.2",
+    "supertest": "^5.0.0"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon .",
+    "format": "prettier --write \"**/*.{html,js,json,md}\"",
+    "test": "jest"
+  }
+}

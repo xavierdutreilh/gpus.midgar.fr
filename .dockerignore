@@ -1,0 +1,14 @@
+.dockerignore
+.editorconfig
+.git
+.gitignore
+.nvmrc
+.prettierignore
+.prettierrc
+coverage
+Dockerfile
+jest.config.js
+LICENSE.txt
+node_modules
+README.md
+src/**/__tests__

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getOffers retrieves nvidia offers 1`] = `
+Array [
+  Object {
+    "name": "NVIDIA GEFORCE RTX 3090",
+    "status": "upcoming",
+    "store": "nvidia",
+  },
+  Object {
+    "name": "ASUS TUF-RTX3090-24G-GAMING",
+    "status": "check_availability",
+    "store": "nvidia",
+  },
+]
+`;
