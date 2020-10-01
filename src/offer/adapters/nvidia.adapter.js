@@ -30,9 +30,12 @@ exports.getOffers = async gpu => {
           ...data.searchedProducts.productDetails,
         ]
       : data.searchedProducts.productDetails
-  return items.map(({ productTitle: name, prdStatus: status }) => ({
-    store: "nvidia",
-    name,
-    status,
-  }))
+  return items.map(
+    ({ productTitle: name, productPrice: price, prdStatus: status }) => ({
+      store: "nvidia",
+      name,
+      price,
+      status,
+    })
+  )
 }

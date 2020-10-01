@@ -20,8 +20,9 @@ exports.getOffers = async gpu => {
   return $(".pdt-item")
     .map((_, element) => {
       const name = $(element).find(".title-3").text().trim()
+      const price = $(element).find(".price .price").text().trim()
       const status = $(element).find(".modal-stock-web.stock").text().trim()
-      return { store: "ldlc", name, status }
+      return { store: "ldlc", name, price, status }
     })
     .toArray()
 }
