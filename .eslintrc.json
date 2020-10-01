@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:node/recommended",
+    "plugin:jest/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "node/no-unpublished-require": [
+      "error",
+      {
+        "allowModules": ["jest-when", "supertest"]
+      }
+    ]
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  }
+}

@@ -1,7 +1,5 @@
 jest.mock("../adapters")
 
-const request = require("supertest")
-
 const crawler = require("../offer.crawler")
 const adapters = require("../adapters")
 
