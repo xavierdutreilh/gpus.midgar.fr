@@ -1,6 +1,6 @@
 const request = require("supertest")
 
-const api = require("../..")
+const api = require("../../api")
 
 describe("GET /", () => {
   it("retrieves api information", async () => {

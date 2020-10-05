@@ -3,7 +3,7 @@ jest.mock("../offer.crawler")
 const { when } = require("jest-when")
 const request = require("supertest")
 
-const api = require("../..")
+const api = require("../../api")
 const crawler = require("../offer.crawler")
 
 describe("GET /offers", () => {
