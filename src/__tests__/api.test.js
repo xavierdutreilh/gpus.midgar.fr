@@ -1,10 +1,21 @@
-jest.mock("../offer.crawler")
+jest.mock("../offer/offer.crawler")
 
 const { when } = require("jest-when")
 const request = require("supertest")
 
-const api = require("../../api")
-const crawler = require("../offer.crawler")
+const api = require("../api")
+const crawler = require("../offer/offer.crawler")
+
+describe("GET /", () => {
+  it("retrieves api information", async () => {
+    const response = await request(api.callback()).get("/")
+    expect(response.status).toBe(200)
+    expect(response.body).toEqual({
+      name: "gpus.midgar.fr",
+      version: expect.any(String),
+    })
+  })
+})
 
 describe("GET /offers", () => {
   beforeAll(() => {
