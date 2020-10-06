@@ -5,6 +5,8 @@
 .nvmrc
 .prettierignore
 .prettierrc
+config/development.json
+config/test.json
 coverage
 Dockerfile
 jest.config.js
