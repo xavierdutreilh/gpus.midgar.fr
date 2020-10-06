@@ -27,7 +27,8 @@ describe("GET /offers", () => {
         {
           store: "nvidia",
           name: "NVIDIA GEFORCE RTX 3090",
-          status: "upcoming",
+          price: "€1,549.00",
+          status: "unavailable",
         },
       ])
   })
@@ -43,7 +44,8 @@ describe("GET /offers", () => {
       {
         store: "nvidia",
         name: "NVIDIA GEFORCE RTX 3090",
-        status: "upcoming",
+        price: "€1,549.00",
+        status: "unavailable",
       },
     ])
   })
