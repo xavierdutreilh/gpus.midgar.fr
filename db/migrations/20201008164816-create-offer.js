@@ -36,7 +36,6 @@ module.exports = {
         allowNull: false,
       },
     })
-
     await queryInterface.addIndex("offers", ["store", "key"], { unique: true })
   },
   down: async queryInterface => {
