@@ -25,6 +25,8 @@ api
   .use(offerRouter.allowedMethods())
 
 if (config.has("sentry.dsn")) {
+  const Sentry = require("@sentry/node")
+
   Sentry.init({
     dsn: config.get("sentry.dsn"),
     environment: config.get("environment"),
