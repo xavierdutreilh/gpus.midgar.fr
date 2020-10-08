@@ -2,7 +2,6 @@ const config = require("config")
 const http = require("http")
 const Koa = require("koa")
 const logger = require("koa-logger")
-const Sentry = require("@sentry/node")
 const stripAnsi = require("strip-ansi")
 
 const offerRouter = require("./offer/offer.router")
@@ -29,6 +28,7 @@ if (config.has("sentry.dsn")) {
 
   Sentry.init({
     dsn: config.get("sentry.dsn"),
+    release: `${config.get("name")}@${config.get("version")}`,
     environment: config.get("environment"),
   })
 
