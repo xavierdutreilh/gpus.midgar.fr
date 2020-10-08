@@ -1,0 +1,22 @@
+version: "3"
+services:
+  test_api:
+    image: node:14.4.0
+    volumes:
+      - .:/app
+    networks:
+      - test_default
+    links:
+      - test_database:database
+    working_dir: /app
+    command: make test
+  test_database:
+    image: postgres:13.0-alpine
+    environment:
+      POSTGRES_USER: gpus
+      POSTGRES_PASSWORD: gpus
+      POSTGRES_DB: gpus
+    networks:
+      - test_default
+networks:
+  test_default:

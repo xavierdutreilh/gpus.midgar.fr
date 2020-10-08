@@ -16,24 +16,18 @@ Enter the directory:
 cd gpus.midgar.fr
 ```
 
-Install all dependencies:
-
-```bash
-npm install
-```
-
 ## Usage
 
 Start the application:
 
 ```bash
-npm start
+docker-compose -f docker-compose.development.yml up
 ```
 
 Test the application:
 
 ```bash
-npm test
+docker-compose -f docker-compose.test.yml up --abort-on-container-exit
 ```
 
 Release the application:

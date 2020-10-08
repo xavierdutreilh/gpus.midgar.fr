@@ -9,10 +9,15 @@
     "build-url": "^6.0.1",
     "cheerio": "^1.0.0-rc.3",
     "config": "^3.3.2",
+    "cron": "^1.8.2",
+    "glob": "^7.1.6",
     "koa": "^2.13.0",
     "koa-logger": "^3.2.1",
     "koa-router": "^9.4.0",
     "node-fetch": "^2.6.1",
+    "pg": "^8.4.0",
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0",
     "strip-ansi": "^6.0.0"
   },
   "devDependencies": {
@@ -21,7 +26,6 @@
     "eslint-plugin-jest": "^24.0.2",
     "eslint-plugin-node": "^11.1.0",
     "jest": "^26.4.2",
-    "jest-when": "^2.7.2",
     "nodemon": "^2.0.4",
     "prettier": "^2.1.2",
     "supertest": "^5.0.0"
@@ -31,9 +35,10 @@
   },
   "license": "MIT",
   "scripts": {
+    "prestart": "sequelize db:migrate",
     "start": "nodemon .",
-    "format": "prettier --write \"**/*.{html,js,json,md}\"",
-    "pretest": "eslint .",
+    "format": "prettier --write \"**/*.{html,js,json,md,yml}\"",
+    "pretest": "eslint . && sequelize db:migrate",
     "test": "jest"
   }
 }

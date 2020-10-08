@@ -1,43 +1,55 @@
-jest.mock("../adapters")
+jest.mock("../adapters/ldlc.adapter")
+jest.mock("../adapters/nvidia.adapter")
 
 const crawler = require("../offer.crawler")
-const adapters = require("../adapters")
+const ldlc = require("../adapters/ldlc.adapter")
+const nvidia = require("../adapters/nvidia.adapter")
+const { Offer } = require("../../db")
 
-describe("getOffers", () => {
+describe("refresh", () => {
   beforeAll(() => {
-    adapters.ldlc.getOffers.mockResolvedValue([
+    ldlc.getOffers.mockResolvedValue([
       {
         store: "ldlc",
+        key: "AR202009090081",
         name: "ASUS GeForce ROG STRIX RTX 3090 O24G GAMING",
-        status: "Rupture",
+        price: "€1,949.95",
+        status: "unavailable",
       },
     ])
-    adapters.nvidia.getOffers.mockResolvedValue([
+    nvidia.getOffers.mockResolvedValue([
       {
         store: "nvidia",
+        key: "NVGFT090_FR",
         name: "NVIDIA GEFORCE RTX 3090",
-        status: "upcoming",
+        price: "€1,549.00",
+        status: "unavailable",
       },
     ])
   })
 
-  it("retrieves offers", async () => {
-    const offers = await crawler.getOffers("rtx3090")
-    expect(adapters.ldlc.getOffers).toHaveBeenCalledTimes(1)
-    expect(adapters.ldlc.getOffers).toHaveBeenCalledWith("rtx3090")
-    expect(adapters.nvidia.getOffers).toHaveBeenCalledTimes(1)
-    expect(adapters.nvidia.getOffers).toHaveBeenCalledWith("rtx3090")
+  afterEach(() => Offer.truncate({ cascade: true, restartIdentity: true }))
+
+  it("refreshes offers", async () => {
+    await crawler.refresh()
+    expect(ldlc.getOffers).toHaveBeenCalledTimes(1)
+    expect(nvidia.getOffers).toHaveBeenCalledTimes(1)
+    const offers = await Offer.findAll()
     expect(offers).toEqual([
-      {
+      expect.objectContaining({
         store: "ldlc",
+        key: "AR202009090081",
         name: "ASUS GeForce ROG STRIX RTX 3090 O24G GAMING",
-        status: "Rupture",
-      },
-      {
+        price: "€1,949.95",
+        status: "unavailable",
+      }),
+      expect.objectContaining({
         store: "nvidia",
+        key: "NVGFT090_FR",
         name: "NVIDIA GEFORCE RTX 3090",
-        status: "upcoming",
-      },
+        price: "€1,549.00",
+        status: "unavailable",
+      }),
     ])
   })
 })

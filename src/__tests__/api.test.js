@@ -1,10 +1,7 @@
-jest.mock("../offer/offer.crawler")
-
-const { when } = require("jest-when")
 const request = require("supertest")
 
 const api = require("../api")
-const crawler = require("../offer/offer.crawler")
+const { Offer } = require("../db")
 
 describe("GET /", () => {
   it("retrieves api information", async () => {
@@ -18,35 +15,29 @@ describe("GET /", () => {
 })
 
 describe("GET /offers", () => {
-  beforeAll(() => {
-    when(crawler.getOffers).calledWith("rtx3070").mockResolvedValue([])
-    when(crawler.getOffers).calledWith("rtx3080").mockResolvedValue([])
-    when(crawler.getOffers)
-      .calledWith("rtx3090")
-      .mockResolvedValue([
-        {
-          store: "nvidia",
-          name: "NVIDIA GEFORCE RTX 3090",
-          price: "€1,549.00",
-          status: "unavailable",
-        },
-      ])
-  })
+  beforeAll(() =>
+    Offer.create({
+      store: "nvidia",
+      key: "NVGFT090_FR",
+      name: "NVIDIA GEFORCE RTX 3090",
+      price: "€1,549.00",
+      status: "unavailable",
+    })
+  )
+
+  afterAll(() => Offer.truncate({ cascade: true, restartIdentity: true }))
 
   it("retrieves offers", async () => {
     const response = await request(api.callback()).get("/offers")
-    expect(crawler.getOffers).toHaveBeenCalledTimes(3)
-    expect(crawler.getOffers).toHaveBeenCalledWith("rtx3070")
-    expect(crawler.getOffers).toHaveBeenCalledWith("rtx3080")
-    expect(crawler.getOffers).toHaveBeenCalledWith("rtx3090")
     expect(response.status).toBe(200)
     expect(response.body).toEqual([
-      {
+      expect.objectContaining({
         store: "nvidia",
+        key: "NVGFT090_FR",
         name: "NVIDIA GEFORCE RTX 3090",
         price: "€1,549.00",
         status: "unavailable",
-      },
+      }),
     ])
   })
 })

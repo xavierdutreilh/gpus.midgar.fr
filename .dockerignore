@@ -8,6 +8,8 @@
 config/development.json
 config/test.json
 coverage
+docker-compose.development.yml
+docker-compose.test.yml
 Dockerfile
 jest.config.js
 LICENSE.txt

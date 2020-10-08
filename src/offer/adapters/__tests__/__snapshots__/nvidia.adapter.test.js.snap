@@ -3,8 +3,23 @@
 exports[`getOffers retrieves nvidia offers 1`] = `
 Array [
   Object {
+    "key": "NVGFT090_FR",
     "name": "NVIDIA GEFORCE RTX 3090",
     "price": "€1,549.00",
+    "status": "unavailable",
+    "store": "nvidia",
+  },
+  Object {
+    "key": "NVGFT070_FR",
+    "name": "NVIDIA GEFORCE RTX 3070",
+    "price": "€519.00",
+    "status": "unavailable",
+    "store": "nvidia",
+  },
+  Object {
+    "key": "NVGFT080_FR",
+    "name": "NVIDIA GEFORCE RTX 3080",
+    "price": "€719.00",
     "status": "unavailable",
     "store": "nvidia",
   },

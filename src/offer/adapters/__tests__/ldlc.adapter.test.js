@@ -10,17 +10,17 @@ describe("getOffers", () => {
   beforeAll(async () => {
     fetch.mockResolvedValue(
       new Response(
-        await fs.readFile(`${__dirname}/mocks/get-ldlc-products.html`, "utf8")
+        await fs.readFile(`${__dirname}/mocks/get-ldlc-offers.html`, "utf8")
       )
     )
   })
 
   it("retrieves ldlc offers", async () => {
-    const products = await ldlc.getOffers("rtx3090")
+    const offers = await ldlc.getOffers()
     expect(fetch).toHaveBeenCalledTimes(1)
     expect(fetch).toHaveBeenCalledWith(
-      "https://www.ldlc.com/recherche/+fcat-4684+fv121-19185.html"
+      "https://www.ldlc.com/recherche/+fcat-4684+fv121-19183,19185.html"
     )
-    expect(products).toMatchSnapshot()
+    expect(offers).toMatchSnapshot()
   })
 })

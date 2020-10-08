@@ -1,0 +1,24 @@
+version: "3"
+services:
+  development_api:
+    image: node:14.4.0
+    volumes:
+      - .:/app
+    networks:
+      - development_default
+    ports:
+      - 3000:3000
+    links:
+      - development_database:database
+    working_dir: /app
+    command: make run
+  development_database:
+    image: postgres:13.0-alpine
+    environment:
+      POSTGRES_USER: gpus
+      POSTGRES_PASSWORD: gpus
+      POSTGRES_DB: gpus
+    networks:
+      - development_default
+networks:
+  development_default:

@@ -1,0 +1,8 @@
+const config = require("config")
+
+module.exports = {
+  url: config.get("database.dsn"),
+  "migrations-path": `${__dirname}/db/migrations`,
+  "models-path": `${__dirname}/db/models`,
+  "seeders-path": `${__dirname}/db/seeders`,
+}

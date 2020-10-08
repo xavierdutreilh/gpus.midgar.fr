@@ -10,17 +10,17 @@ describe("getOffers", () => {
   beforeAll(async () => {
     fetch.mockResolvedValue(
       new Response(
-        await fs.readFile(`${__dirname}/mocks/get-nvidia-products.json`, "utf8")
+        await fs.readFile(`${__dirname}/mocks/get-nvidia-offers.json`, "utf8")
       )
     )
   })
 
   it("retrieves nvidia offers", async () => {
-    const products = await nvidia.getOffers("rtx3090")
+    const offers = await nvidia.getOffers()
     expect(fetch).toHaveBeenCalledTimes(1)
     expect(fetch).toHaveBeenCalledWith(
-      "https://api.nvidia.partners/edge/product/search?page=1&limit=100&locale=fr-fr&manufacturer=NVIDIA&gpu=RTX%203090&category=GPU"
+      "https://api.nvidia.partners/edge/product/search?page=1&limit=100&locale=fr-fr&manufacturer=NVIDIA&gpu=RTX%203070%2CRTX%203080%2CRTX%203090&category=GPU"
     )
-    expect(products).toMatchSnapshot()
+    expect(offers).toMatchSnapshot()
   })
 })

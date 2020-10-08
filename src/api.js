@@ -1,4 +1,5 @@
 const config = require("config")
+const http = require("http")
 const Koa = require("koa")
 const logger = require("koa-logger")
 const Sentry = require("@sentry/node")
@@ -37,6 +38,10 @@ if (config.has("sentry.dsn")) {
       Sentry.captureException(err)
     })
   })
+}
+
+api.start = () => {
+  http.createServer(api.callback()).listen(config.get("port"))
 }
 
 module.exports = api

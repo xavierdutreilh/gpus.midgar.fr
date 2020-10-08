@@ -10,7 +10,7 @@
     "node/no-unpublished-require": [
       "error",
       {
-        "allowModules": ["jest-when", "supertest"]
+        "allowModules": ["supertest"]
       }
     ]
   },
