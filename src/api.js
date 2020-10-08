@@ -34,9 +34,9 @@ if (config.has("sentry.dsn")) {
 
   api.on("error", (err, ctx) => {
     Sentry.withScope(scope => {
-      scope.addEventProcessor(event => {
-        return Sentry.Handlers.parseRequest(event, ctx.request)
-      })
+      scope.addEventProcessor(event =>
+        Sentry.Handlers.parseRequest(event, ctx.request)
+      )
       Sentry.captureException(err)
     })
   })
