@@ -9,7 +9,7 @@ const rootRouter = require("./root/root.router")
 
 const api = new Koa()
 
-if (process.env.NODE_ENV !== "test") {
+if (config.get("environment") !== "test") {
   api.use(
     logger(str => {
       console.log(stripAnsi(str))
@@ -26,7 +26,7 @@ api
 if (config.has("sentry.dsn")) {
   Sentry.init({
     dsn: config.get("sentry.dsn"),
-    environment: process.env.NODE_ENV,
+    environment: config.get("environment"),
   })
 
   api.on("error", (err, ctx) => {
