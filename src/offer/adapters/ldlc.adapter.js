@@ -12,7 +12,7 @@ const statusMap = {
 exports.getOffers = async () => {
   const response = await fetch(
     url("https://www.ldlc.com", {
-      path: `/recherche/+fcat-4684+fv121-19183,19185.html`,
+      path: "/recherche/+fcat-4684+fv121-19183,19185.html",
     })
   )
   if (!response.ok) return []
