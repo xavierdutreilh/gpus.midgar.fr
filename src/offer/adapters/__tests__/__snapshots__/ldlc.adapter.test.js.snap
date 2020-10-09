@@ -181,7 +181,7 @@ Array [
     "key": "AR202009030020",
     "name": "ZOTAC GeForce RTX 3090 TRINITY",
     "price": "€1,729.94",
-    "status": "unknown",
+    "status": "available",
     "store": "ldlc",
   },
   Object {

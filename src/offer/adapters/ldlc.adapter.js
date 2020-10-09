@@ -3,8 +3,9 @@ const fetch = require("node-fetch")
 const url = require("build-url")
 
 const statusMap = {
-  "+ de 15 jours": "available",
   "En stock": "available",
+  "Entre 7/15 jours": "available",
+  "+ de 15 jours": "available",
   Rupture: "unavailable",
 }
 
