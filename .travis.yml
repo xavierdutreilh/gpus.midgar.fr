@@ -1,0 +1,7 @@
+language: shell
+os: linux
+dist: focal
+services:
+  - docker
+script:
+  - docker-compose -f docker-compose.test.yml up --abort-on-container-exit
