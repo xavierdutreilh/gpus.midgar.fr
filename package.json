@@ -2,7 +2,7 @@
   "name": "gpus.midgar.fr",
   "private": true,
   "description": "The source code to gpus.midgar.fr",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "author": "Xavier Dutreilh <xavier@dutreilh.com>",
   "dependencies": {
     "@sentry/node": "^5.25.0",
