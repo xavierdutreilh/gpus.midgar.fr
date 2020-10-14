@@ -1,8 +1,10 @@
 jest.mock("../adapters/ldlc.adapter")
+jest.mock("../adapters/materielnet.adapter")
 jest.mock("../adapters/nvidia.adapter")
 
 const crawler = require("../offer.crawler")
 const ldlc = require("../adapters/ldlc.adapter")
+const materielnet = require("../adapters/materielnet.adapter")
 const nvidia = require("../adapters/nvidia.adapter")
 const { Offer } = require("../../db")
 
@@ -13,6 +15,15 @@ describe("refresh", () => {
         store: "ldlc",
         key: "AR202009090081",
         name: "ASUS GeForce ROG STRIX RTX 3090 O24G GAMING",
+        price: "€1,949.95",
+        status: "unavailable",
+      },
+    ])
+    materielnet.getOffers.mockResolvedValue([
+      {
+        store: "materiel.net",
+        key: "AR202009090081",
+        name: "Asus GeForce RTX 3090 ROG STRIX OC",
         price: "€1,949.95",
         status: "unavailable",
       },
@@ -33,6 +44,7 @@ describe("refresh", () => {
   it("refreshes offers", async () => {
     await crawler.refresh()
     expect(ldlc.getOffers).toHaveBeenCalledTimes(1)
+    expect(materielnet.getOffers).toHaveBeenCalledTimes(1)
     expect(nvidia.getOffers).toHaveBeenCalledTimes(1)
     const offers = await Offer.findAll()
     expect(offers).toEqual([
@@ -40,6 +52,13 @@ describe("refresh", () => {
         store: "ldlc",
         key: "AR202009090081",
         name: "ASUS GeForce ROG STRIX RTX 3090 O24G GAMING",
+        price: "€1,949.95",
+        status: "unavailable",
+      }),
+      expect.objectContaining({
+        store: "materiel.net",
+        key: "AR202009090081",
+        name: "Asus GeForce RTX 3090 ROG STRIX OC",
         price: "€1,949.95",
         status: "unavailable",
       }),
