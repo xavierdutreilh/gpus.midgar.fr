@@ -4,6 +4,7 @@ const url = require("build-url")
 
 const statusMap = {
   "En stock": "available",
+  "Sous 7 jours": "available",
   "Entre 7/15 jours": "available",
   "+ de 15 jours": "available",
   Rupture: "unavailable",
