@@ -13,6 +13,7 @@ router.route({
   validate: {
     query: Joi.object().keys({
       store: Joi.string(),
+      status: Joi.string(),
     }),
   },
   handler: index,
