@@ -17,11 +17,7 @@ if (config.get("environment") !== "test") {
   )
 }
 
-api
-  .use(rootRouter.routes())
-  .use(rootRouter.allowedMethods())
-  .use(offerRouter.routes())
-  .use(offerRouter.allowedMethods())
+api.use(rootRouter.middleware()).use(offerRouter.middleware())
 
 if (config.has("sentry.dsn")) {
   const Sentry = require("@sentry/node")

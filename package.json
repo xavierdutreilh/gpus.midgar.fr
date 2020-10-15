@@ -13,6 +13,7 @@
     "form-data": "^3.0.0",
     "glob": "^7.1.6",
     "koa": "^2.13.0",
+    "koa-joi-router": "^6.0.2",
     "koa-logger": "^3.2.1",
     "koa-router": "^9.4.0",
     "node-fetch": "^2.6.1",
