@@ -22,7 +22,7 @@ exports.getOffers = async () => {
   const $ = cheerio.load(text)
   const offers = $(".c-products-list__item")
     .map((_, element) => ({
-      store: "materiel.net",
+      store: "materielnet",
       key: $(element).data("id"),
       name: $(element).find(".c-product__title").text().trim(),
       price: $(element)

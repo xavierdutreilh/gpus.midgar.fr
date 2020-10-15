@@ -21,7 +21,7 @@ describe("refresh", () => {
     ])
     materielnet.getOffers.mockResolvedValue([
       {
-        store: "materiel.net",
+        store: "materielnet",
         key: "AR202009090081",
         name: "Asus GeForce RTX 3090 ROG STRIX OC",
         price: "€1,949.95",
@@ -56,7 +56,7 @@ describe("refresh", () => {
         status: "unavailable",
       }),
       expect.objectContaining({
-        store: "materiel.net",
+        store: "materielnet",
         key: "AR202009090081",
         name: "Asus GeForce RTX 3090 ROG STRIX OC",
         price: "€1,949.95",
