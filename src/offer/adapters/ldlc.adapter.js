@@ -33,6 +33,7 @@ exports.getOffers = async () => {
       status:
         statusMap[$(element).find(".modal-stock-web.stock").text().trim()] ||
         "unknown",
+      url: `https://www.ldlc.com${$(element).find(".title-3 a").attr("href")}`,
     }))
     .toArray()
 }

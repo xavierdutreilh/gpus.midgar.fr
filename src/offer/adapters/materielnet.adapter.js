@@ -32,6 +32,9 @@ exports.getOffers = async () => {
         .replace(/\s+/g, ",")
         .replace(/^([0-9,]+)(€)(\d+)$/, "$2$1.$3"),
       status: "unknown",
+      url: `https://www.materiel.net${$(element)
+        .find(".c-product__link")
+        .attr("href")}`,
     }))
     .toArray()
   const formData = new FormData()

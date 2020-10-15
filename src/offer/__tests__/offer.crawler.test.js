@@ -17,6 +17,7 @@ describe("refresh", () => {
         name: "ASUS GeForce ROG STRIX RTX 3090 O24G GAMING",
         price: "€1,949.95",
         status: "unavailable",
+        url: "https://www.ldlc.com/fiche/PB00369849.html",
       },
     ])
     materielnet.getOffers.mockResolvedValue([
@@ -26,6 +27,7 @@ describe("refresh", () => {
         name: "Asus GeForce RTX 3090 ROG STRIX OC",
         price: "€1,949.95",
         status: "unavailable",
+        url: "https://www.materiel.net/produit/202009090081.html",
       },
     ])
     nvidia.getOffers.mockResolvedValue([
@@ -54,6 +56,7 @@ describe("refresh", () => {
         name: "ASUS GeForce ROG STRIX RTX 3090 O24G GAMING",
         price: "€1,949.95",
         status: "unavailable",
+        url: "https://www.ldlc.com/fiche/PB00369849.html",
       }),
       expect.objectContaining({
         store: "materielnet",
@@ -61,6 +64,7 @@ describe("refresh", () => {
         name: "Asus GeForce RTX 3090 ROG STRIX OC",
         price: "€1,949.95",
         status: "unavailable",
+        url: "https://www.materiel.net/produit/202009090081.html",
       }),
       expect.objectContaining({
         store: "nvidia",

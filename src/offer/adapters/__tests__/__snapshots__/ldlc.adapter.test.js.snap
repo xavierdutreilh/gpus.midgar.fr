@@ -8,6 +8,7 @@ Array [
     "price": "€1,849.94",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00369842.html",
   },
   Object {
     "key": "AR202009070051",
@@ -15,6 +16,7 @@ Array [
     "price": "€1,729.94",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00370057.html",
   },
   Object {
     "key": "AR202009030021",
@@ -22,6 +24,7 @@ Array [
     "price": "€899.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00368579.html",
   },
   Object {
     "key": "AR202009030072",
@@ -29,6 +32,7 @@ Array [
     "price": "€999.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00368692.html",
   },
   Object {
     "key": "AR202009180078",
@@ -36,6 +40,7 @@ Array [
     "price": "€949.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00375644.html",
   },
   Object {
     "key": "AR202009070050",
@@ -43,6 +48,7 @@ Array [
     "price": "€1,849.94",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00370065.html",
   },
   Object {
     "key": "AR202009080079",
@@ -50,6 +56,7 @@ Array [
     "price": "€1,699.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00371132.html",
   },
   Object {
     "key": "AR202009080098",
@@ -57,6 +64,7 @@ Array [
     "price": "€1,779.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00374912.html",
   },
   Object {
     "key": "AR202009090081",
@@ -64,6 +72,7 @@ Array [
     "price": "€1,949.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00369849.html",
   },
   Object {
     "key": "AR202009090102",
@@ -71,6 +80,7 @@ Array [
     "price": "€1,739.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00374629.html",
   },
   Object {
     "key": "AR202009090103",
@@ -78,6 +88,7 @@ Array [
     "price": "€1,829.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00374628.html",
   },
   Object {
     "key": "AR202009090107",
@@ -85,6 +96,7 @@ Array [
     "price": "€1,999.94",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00374838.html",
   },
   Object {
     "key": "AR202009090109",
@@ -92,6 +104,7 @@ Array [
     "price": "€2,049.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00374837.html",
   },
   Object {
     "key": "AR202009030068",
@@ -99,6 +112,7 @@ Array [
     "price": "€1,749.95",
     "status": "available",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00374614.html",
   },
   Object {
     "key": "AR202009030078",
@@ -106,6 +120,7 @@ Array [
     "price": "€1,649.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00371280.html",
   },
   Object {
     "key": "AR202009030081",
@@ -113,6 +128,7 @@ Array [
     "price": "€1,849.94",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00374911.html",
   },
   Object {
     "key": "AR202009080051",
@@ -120,6 +136,7 @@ Array [
     "price": "€1,749.95",
     "status": "available",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00371133.html",
   },
   Object {
     "key": "AR202009080064",
@@ -127,6 +144,7 @@ Array [
     "price": "€1,769.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00371131.html",
   },
   Object {
     "key": "AR202009090106",
@@ -134,6 +152,7 @@ Array [
     "price": "€1,899.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00374631.html",
   },
   Object {
     "key": "AR202009010057",
@@ -141,6 +160,7 @@ Array [
     "price": "€999.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00368789.html",
   },
   Object {
     "key": "AR202009030073",
@@ -148,6 +168,7 @@ Array [
     "price": "€999.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00368691.html",
   },
   Object {
     "key": "AR202009070052",
@@ -155,6 +176,7 @@ Array [
     "price": "€999.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00368574.html",
   },
   Object {
     "key": "AR202009080103",
@@ -162,6 +184,7 @@ Array [
     "price": "€999.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00369158.html",
   },
   Object {
     "key": "AR202009090099",
@@ -169,6 +192,7 @@ Array [
     "price": "€979.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00369268.html",
   },
   Object {
     "key": "AR202009090101",
@@ -176,6 +200,7 @@ Array [
     "price": "€1,099.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00369299.html",
   },
   Object {
     "key": "AR202009030020",
@@ -183,6 +208,7 @@ Array [
     "price": "€1,729.94",
     "status": "available",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00370250.html",
   },
   Object {
     "key": "AR202009030069",
@@ -190,6 +216,7 @@ Array [
     "price": "€1,699.94",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00374606.html",
   },
   Object {
     "key": "AR202009080052",
@@ -197,6 +224,7 @@ Array [
     "price": "€949.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00368931.html",
   },
   Object {
     "key": "AR202009080097",
@@ -204,6 +232,7 @@ Array [
     "price": "€1,789.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00374914.html",
   },
   Object {
     "key": "AR202009080099",
@@ -211,6 +240,7 @@ Array [
     "price": "€999.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00375448.html",
   },
   Object {
     "key": "AR202009080101",
@@ -218,6 +248,7 @@ Array [
     "price": "€1,819.94",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00370913.html",
   },
   Object {
     "key": "AR202009080102",
@@ -225,6 +256,7 @@ Array [
     "price": "€1,749.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00370903.html",
   },
   Object {
     "key": "AR202009090076",
@@ -232,6 +264,7 @@ Array [
     "price": "€1,099.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00375431.html",
   },
   Object {
     "key": "AR202009090100",
@@ -239,6 +272,7 @@ Array [
     "price": "€1,049.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00369265.html",
   },
   Object {
     "key": "AR202009180077",
@@ -246,6 +280,7 @@ Array [
     "price": "€999.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00375625.html",
   },
   Object {
     "key": "AR202009290104",
@@ -253,6 +288,7 @@ Array [
     "price": "€1,999.96",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00376302.html",
   },
   Object {
     "key": "AR202009300085",
@@ -260,6 +296,7 @@ Array [
     "price": "€1,049.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00376207.html",
   },
   Object {
     "key": "AR202009030079",
@@ -267,6 +304,7 @@ Array [
     "price": "€949.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00368690.html",
   },
   Object {
     "key": "AR202009080083",
@@ -274,6 +312,7 @@ Array [
     "price": "€999.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00368968.html",
   },
   Object {
     "key": "AR202009080086",
@@ -281,6 +320,7 @@ Array [
     "price": "€949.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00369072.html",
   },
   Object {
     "key": "AR202009080100",
@@ -288,6 +328,7 @@ Array [
     "price": "€949.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00369094.html",
   },
   Object {
     "key": "AR202009080104",
@@ -295,6 +336,7 @@ Array [
     "price": "€949.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00369150.html",
   },
   Object {
     "key": "AR202009090098",
@@ -302,6 +344,7 @@ Array [
     "price": "€949.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00369298.html",
   },
   Object {
     "key": "AR202009100088",
@@ -309,6 +352,7 @@ Array [
     "price": "€949.94",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00369303.html",
   },
   Object {
     "key": "AR202009030080",
@@ -316,6 +360,7 @@ Array [
     "price": "€1,049.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00368844.html",
   },
   Object {
     "key": "AR202009070053",
@@ -323,6 +368,7 @@ Array [
     "price": "€949.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00368506.html",
   },
   Object {
     "key": "AR202009180076",
@@ -330,6 +376,7 @@ Array [
     "price": "€1,099.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00375491.html",
   },
   Object {
     "key": "AR202009290084",
@@ -337,6 +384,7 @@ Array [
     "price": "€1,149.95",
     "status": "unavailable",
     "store": "ldlc",
+    "url": "https://www.ldlc.com/fiche/PB00376208.html",
   },
 ]
 `;

@@ -37,6 +37,7 @@ describe("GET /offers", () => {
         name: "NVIDIA GEFORCE RTX 3090",
         price: "€1,549.00",
         status: "unavailable",
+        url: null,
       }),
     ])
   })
