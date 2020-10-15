@@ -41,6 +41,9 @@ module.exports = (sequelize, DataTypes) => {
           fields: ["store", "key"],
           unique: true,
         },
+        {
+          fields: ["status"],
+        },
       ],
     }
   )
