@@ -27,6 +27,9 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      url: {
+        type: Sequelize.STRING,
+      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,
@@ -37,6 +40,7 @@ module.exports = {
       },
     })
     await queryInterface.addIndex("offers", ["store", "key"], { unique: true })
+    await queryInterface.addIndex("offers", ["status"])
   },
   down: async queryInterface => {
     await queryInterface.dropTable("offers")
