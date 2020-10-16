@@ -4,19 +4,15 @@ module.exports = (sequelize, DataTypes) => {
   class Offer extends Model {}
   Offer.init(
     {
-      id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
-      },
       store: {
         type: DataTypes.STRING,
         allowNull: false,
+        primaryKey: true,
       },
       key: {
         type: DataTypes.STRING,
         allowNull: false,
+        primaryKey: true,
       },
       name: {
         type: DataTypes.STRING,
@@ -40,10 +36,6 @@ module.exports = (sequelize, DataTypes) => {
       tableName: "offers",
       underscored: true,
       indexes: [
-        {
-          fields: ["store", "key"],
-          unique: true,
-        },
         {
           fields: ["status"],
         },

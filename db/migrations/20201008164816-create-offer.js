@@ -1,19 +1,15 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable("offers", {
-      id: {
-        type: Sequelize.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
-      },
       store: {
         type: Sequelize.STRING,
         allowNull: false,
+        primaryKey: true,
       },
       key: {
         type: Sequelize.STRING,
         allowNull: false,
+        primaryKey: true,
       },
       name: {
         type: Sequelize.STRING,
@@ -39,7 +35,6 @@ module.exports = {
         allowNull: false,
       },
     })
-    await queryInterface.addIndex("offers", ["store", "key"], { unique: true })
     await queryInterface.addIndex("offers", ["status"])
   },
   down: async queryInterface => {
