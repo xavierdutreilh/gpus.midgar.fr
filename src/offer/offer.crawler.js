@@ -9,8 +9,9 @@ exports.refresh = async () => {
     materielnet.getOffers(),
     nvidia.getOffers(),
   ]) {
-    for (const offer of offers) {
-      await Offer.upsert(offer, { returning: false })
-    }
+    await Offer.bulkCreate(offers, {
+      updateOnDuplicate: ["name", "price", "status", "url"],
+      returning: false,
+    })
   }
 }
