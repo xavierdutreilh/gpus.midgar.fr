@@ -29,6 +29,9 @@ module.exports = (sequelize, DataTypes) => {
       url: {
         type: DataTypes.STRING,
       },
+      search: {
+        type: "TSVECTOR",
+      },
     },
     {
       sequelize,
@@ -38,6 +41,10 @@ module.exports = (sequelize, DataTypes) => {
       indexes: [
         {
           fields: ["status"],
+        },
+        {
+          fields: ["search"],
+          using: "gin",
         },
       ],
     }
