@@ -31,14 +31,16 @@ describe("GET /offers", () => {
     const response = await request(api.callback()).get("/offers")
     expect(response.status).toBe(200)
     expect(response.body).toEqual([
-      expect.objectContaining({
+      {
         store: "nvidia",
         key: "NVGFT090_FR",
         name: "NVIDIA GEFORCE RTX 3090",
         price: "€1,549.00",
         status: "unavailable",
         url: null,
-      }),
+        created_at: expect.any(String),
+        updated_at: expect.any(String),
+      },
     ])
   })
 })

@@ -2,6 +2,7 @@ const Sequelize = require("sequelize")
 const { Op } = require("sequelize")
 
 const { Offer } = require("../db")
+const { serialize } = require("./offer.serializer")
 
 exports.index = async ctx => {
   const { name, ...where } = ctx.request.query
@@ -14,8 +15,9 @@ exports.index = async ctx => {
       ),
     ]
   }
-  ctx.body = await Offer.findAll({
+  const offers = await Offer.findAll({
     where,
     order: [["updatedAt", "DESC"]],
   })
+  ctx.body = offers.map(serialize)
 }
