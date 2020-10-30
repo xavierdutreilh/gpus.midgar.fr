@@ -12,9 +12,9 @@ router.route({
   path: "/",
   validate: {
     query: Joi.object().keys({
-      store: Joi.string(),
-      name: Joi.string(),
-      status: Joi.string(),
+      store: Joi.string().empty(""),
+      name: Joi.string().empty(""),
+      status: Joi.string().empty(""),
     }),
   },
   handler: index,

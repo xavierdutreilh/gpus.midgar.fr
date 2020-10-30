@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    title Offers | gpus.midgar.fr
+    meta(name="author" content="Xavier Dutreilh")
+  body
+    main
+      form
+        label(for="store") Store
+        select(id="store" name="store")
+          option(value="") All
+          option(value="ldlc" selected=query.store === "ldlc") LDLC
+          option(value="materielnet" selected=query.store === "materielnet") Materiel.net
+          option(value="nvidia" selected=query.store === "nvidia") Nvidia
+        label(for="name") Name
+        input(type="text" id="name" name="name" value=query.name)
+        label(for="status") Status
+        select(id="status" name="status")
+          option(value="") All
+          option(value="available" selected=query.status === "available") Available
+          option(value="unavailable" selected=query.status === "unavailable") Unavailable
+          option(value="unknown" selected=query.status === "unknown") Unknown
+        button(type="submit") Search
+      table
+        thead
+          tr
+            th Store
+            th Name
+            th Price
+            th Status
+        tbody
+          - for (const offer of offers)
+            tr
+              td= offer.store
+              td
+                if offer.url
+                  a(href=offer.url target="_blank" rel="noopener noreferrer")= offer.name
+                else
+                  = offer.name
+              td= offer.price
+              td= offer.status
