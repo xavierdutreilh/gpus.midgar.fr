@@ -33,9 +33,7 @@ exports.index = async ctx => {
       break
     default:
       ctx.body = await pug.render("index", {
-        site: {
-          name: config.get("name"),
-        },
+        config,
         query,
         offers,
       })
