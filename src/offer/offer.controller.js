@@ -7,9 +7,7 @@ const { Op } = require("sequelize")
 const { Offer } = require("../db")
 const { serialize } = require("./offer.serializer")
 
-const pug = new Pug({
-  viewPath: `${__dirname}/views`,
-})
+const pug = new Pug({ viewPath: `${__dirname}/views` })
 
 exports.index = async ctx => {
   const query = cleanDeep(ctx.request.query)
@@ -23,10 +21,7 @@ exports.index = async ctx => {
       ),
     ]
   }
-  const offers = await Offer.findAll({
-    where,
-    order: [["updatedAt", "DESC"]],
-  })
+  const offers = await Offer.findAll({ where, order: [["updatedAt", "DESC"]] })
   switch (ctx.accepts("html", "json")) {
     case "json":
       ctx.body = offers.map(serialize)
