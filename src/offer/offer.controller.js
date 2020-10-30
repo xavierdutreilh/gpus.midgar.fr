@@ -31,6 +31,6 @@ exports.index = async ctx => {
       ctx.body = offers.map(serialize)
       break
     default:
-      ctx.body = await pug.render("list", { query, offers })
+      ctx.body = await pug.render("index", { query, offers })
   }
 }
