@@ -24,6 +24,7 @@ describe("GET /", () => {
       expect(response.body).toEqual({
         name: "gpus.midgar.fr",
         version: expect.any(String),
+        environment: "test",
       })
     })
   })
