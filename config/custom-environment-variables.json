@@ -1,8 +1,5 @@
 {
   "database": {
     "dsn": "DATABASE_DSN"
-  },
-  "sentry": {
-    "dsn": "SENTRY_DSN"
   }
 }

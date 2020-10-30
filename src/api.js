@@ -19,25 +19,6 @@ if (config.get("environment") !== "test") {
 
 api.use(rootRouter.middleware()).use(offerRouter.middleware())
 
-if (config.has("sentry.dsn")) {
-  const Sentry = require("@sentry/node")
-
-  Sentry.init({
-    dsn: config.get("sentry.dsn"),
-    release: `${config.get("name")}@${config.get("version")}`,
-    environment: config.get("environment"),
-  })
-
-  api.on("error", (err, ctx) => {
-    Sentry.withScope(scope => {
-      scope.addEventProcessor(event =>
-        Sentry.Handlers.parseRequest(event, ctx.request)
-      )
-      Sentry.captureException(err)
-    })
-  })
-}
-
 api.start = () => {
   http.createServer(api.callback()).listen(config.get("port"))
 }
