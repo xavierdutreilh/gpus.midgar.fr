@@ -49,7 +49,12 @@ module.exports = {
         transaction,
       })
       await queryInterface.sequelize.query(
-        "CREATE TRIGGER offers_search_update BEFORE INSERT OR UPDATE ON offers FOR EACH ROW EXECUTE PROCEDURE tsvector_update_trigger(search, 'pg_catalog.english', name)",
+        `
+        CREATE TRIGGER offers_search_update
+        BEFORE INSERT OR UPDATE ON offers
+        FOR EACH ROW
+        EXECUTE PROCEDURE tsvector_update_trigger(search, 'pg_catalog.english', name)
+        `,
         { transaction }
       )
     })
