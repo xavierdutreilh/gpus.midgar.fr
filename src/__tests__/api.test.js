@@ -62,13 +62,10 @@ describe("GET /offers", () => {
       expect(response.body).toEqual([
         {
           store: "nvidia",
-          key: "NVGFT090_FR",
           name: "NVIDIA GEFORCE RTX 3090",
           price: "€1,549.00",
           status: "unavailable",
           url: null,
-          created_at: expect.any(String),
-          updated_at: expect.any(String),
         },
       ])
     })
