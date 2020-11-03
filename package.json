@@ -41,7 +41,7 @@
     "prestart": "sequelize db:migrate",
     "start": "nodemon .",
     "format": "prettier --write \"**/*.{html,js,json,md,yml}\"",
-    "pretest": "eslint . && sequelize db:migrate",
+    "pretest": "eslint . && sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all",
     "test": "jest"
   }
 }

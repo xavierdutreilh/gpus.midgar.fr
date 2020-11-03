@@ -1,7 +1,6 @@
 const request = require("supertest")
 
 const api = require("../api")
-const { Offer } = require("../db")
 
 describe("GET /", () => {
   describe("Accept: text/html", () => {
@@ -31,18 +30,6 @@ describe("GET /", () => {
 })
 
 describe("GET /offers", () => {
-  beforeAll(() =>
-    Offer.create({
-      store: "nvidia",
-      key: "NVGFT090_FR",
-      name: "NVIDIA GEFORCE RTX 3090",
-      price: "€1,549.00",
-      status: "unavailable",
-    })
-  )
-
-  afterAll(() => Offer.truncate({ cascade: true, restartIdentity: true }))
-
   describe("Accept: text/html", () => {
     it("renders offers", async () => {
       const response = await request(api.callback())
@@ -66,6 +53,13 @@ describe("GET /offers", () => {
           price: "€1,549.00",
           status: "unavailable",
           url: null,
+        },
+        {
+          store: "ldlc",
+          name: "ASUS GeForce ROG STRIX RTX 3090 O24G GAMING",
+          price: "€1,949.95",
+          status: "unavailable",
+          url: "https://www.ldlc.com/fiche/PB00369849.html",
         },
       ])
     })
