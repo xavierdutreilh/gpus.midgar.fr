@@ -1,5 +1,4 @@
 const config = require("config")
-const http = require("http")
 const Koa = require("koa")
 const logger = require("koa-logger")
 
@@ -13,9 +12,5 @@ if (config.get("environment") !== "test") {
 }
 
 api.use(rootRouter.middleware()).use(offerRouter.middleware())
-
-api.start = () => {
-  http.createServer(api.callback()).listen(config.get("port"))
-}
 
 module.exports = api
