@@ -10,7 +10,7 @@ exports.refresh = async () => {
     nvidia.getOffers(),
   ]) {
     await Offer.bulkCreate(offers, {
-      updateOnDuplicate: ["name", "price", "status", "url"],
+      updateOnDuplicate: ["name", "price", "status", "url", "updatedAt"],
       returning: false,
     })
   }

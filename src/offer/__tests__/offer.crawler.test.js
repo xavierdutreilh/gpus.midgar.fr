@@ -60,7 +60,7 @@ describe("refresh", () => {
         },
       ],
       {
-        updateOnDuplicate: ["name", "price", "status", "url"],
+        updateOnDuplicate: ["name", "price", "status", "url", "updatedAt"],
         returning: false,
       }
     )
@@ -76,7 +76,7 @@ describe("refresh", () => {
         },
       ],
       {
-        updateOnDuplicate: ["name", "price", "status", "url"],
+        updateOnDuplicate: ["name", "price", "status", "url", "updatedAt"],
         returning: false,
       }
     )
@@ -91,7 +91,7 @@ describe("refresh", () => {
         },
       ],
       {
-        updateOnDuplicate: ["name", "price", "status", "url"],
+        updateOnDuplicate: ["name", "price", "status", "url", "updatedAt"],
         returning: false,
       }
     )
