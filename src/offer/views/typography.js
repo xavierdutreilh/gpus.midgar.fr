@@ -2,9 +2,6 @@ const Typography = require("typography")
 const theme = require("typography-theme-github")
 
 theme.overrideThemeStyles = () => ({
-  a: {
-    color: "#f5b027",
-  },
   body: {
     backgroundColor: "#1e1e1e",
     color: "#fff",
@@ -34,6 +31,9 @@ theme.overrideThemeStyles = () => ({
   },
   "td, th": {
     borderBottom: 0,
+  },
+  a: {
+    color: "#f5b027",
   },
 })
 
