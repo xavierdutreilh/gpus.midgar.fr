@@ -5,6 +5,7 @@ const statusMap = {
   buy_now: "available",
   gf_notify_me: "unavailable",
   upcoming: "unavailable",
+  out_of_stock: "unavailable",
 }
 
 exports.getOffers = async () => {
