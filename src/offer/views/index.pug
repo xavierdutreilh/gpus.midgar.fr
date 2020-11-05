@@ -1,5 +1,7 @@
 extends layout
 block content
+  form
+    input(type="text" name="name" value=query.name required placeholder="Search" aria-label="Name")
   table
     thead
       tr

@@ -14,6 +14,21 @@ theme.overrideThemeStyles = () => ({
   main: {
     margin: "2.4375rem",
   },
+  form: {
+    alignContent: "center",
+    display: "flex",
+    margin: "2.4375rem 0",
+  },
+  input: {
+    backgroundColor: "#080808",
+    border: 0,
+    borderRadius: "0.5rem",
+    color: "#fff",
+    margin: "0 auto",
+    maxWidth: "480px",
+    padding: "1rem",
+    width: "100%",
+  },
   table: {
     margin: "2.4375rem 0",
   },
