@@ -26,4 +26,11 @@ block content
             else
               = offer.name
           td= offer.price
-          td= offer.status
+          td
+            case offer.status
+              when "available"
+                | Available
+              when "unavailable"
+                | Unavailable
+              when "unknown"
+                | Unknown
