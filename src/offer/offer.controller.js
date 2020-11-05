@@ -1,5 +1,4 @@
 const cleanDeep = require("clean-deep")
-const config = require("config")
 const Pug = require("koa-pug")
 const Sequelize = require("sequelize")
 const { Op } = require("sequelize")
@@ -30,6 +29,6 @@ exports.index = async ctx => {
       ctx.body = offers
       break
     default:
-      ctx.body = await pug.render("index", { config, query, offers })
+      ctx.body = await pug.render("index", { query, offers, require })
   }
 }
