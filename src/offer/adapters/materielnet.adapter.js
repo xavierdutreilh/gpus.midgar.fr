@@ -12,31 +12,34 @@ const statusMap = {
 }
 
 exports.getOffers = async () => {
-  let response = await fetch(
-    url("https://www.materiel.net", {
-      path: "/recherche/+fcat-426+fv121-19183,19185.html",
+  const offers = []
+  for (const gpu of ["19183", "19184", "19185"]) {
+    const response = await fetch(
+      url("https://www.materiel.net", {
+        path: `/recherche/+fcat-426+fv121-${gpu}.html`,
+      })
+    )
+    if (!response.ok) return []
+    const text = await response.text()
+    const $ = cheerio.load(text)
+    $(".c-products-list__item").each((_, element) => {
+      offers.push({
+        store: "materielnet",
+        key: $(element).data("id"),
+        name: $(element).find(".c-product__title").text().trim(),
+        price: $(element)
+          .find(".o-product__price")
+          .text()
+          .trim()
+          .replace(/\s+/g, ",")
+          .replace(/^([0-9,]+)(€)(\d+)$/, "$2$1.$3"),
+        status: "unknown",
+        url: `https://www.materiel.net${$(element)
+          .find(".c-product__link")
+          .attr("href")}`,
+      })
     })
-  )
-  if (!response.ok) return []
-  const text = await response.text()
-  const $ = cheerio.load(text)
-  const offers = $(".c-products-list__item")
-    .map((_, element) => ({
-      store: "materielnet",
-      key: $(element).data("id"),
-      name: $(element).find(".c-product__title").text().trim(),
-      price: $(element)
-        .find(".o-product__price")
-        .text()
-        .trim()
-        .replace(/\s+/g, ",")
-        .replace(/^([0-9,]+)(€)(\d+)$/, "$2$1.$3"),
-      status: "unknown",
-      url: `https://www.materiel.net${$(element)
-        .find(".c-product__link")
-        .attr("href")}`,
-    }))
-    .toArray()
+  }
   const formData = new FormData()
   formData.append(
     "json",
@@ -46,7 +49,7 @@ exports.getOffers = async () => {
       shops: [{ shopId: -1 }],
     })
   )
-  response = await fetch(
+  const response = await fetch(
     url("https://www.materiel.net", { path: "/product-listing/stock-price/" }),
     {
       method: "POST",

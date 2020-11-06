@@ -10,7 +10,10 @@ describe("getOffers", () => {
   beforeAll(async () => {
     fetch.mockResolvedValue(
       new Response(
-        await fs.readFile(`${__dirname}/mocks/get-nvidia-offers.json`, "utf8")
+        await fs.readFile(
+          `${__dirname}/mocks/https-api-nvidia-partners-edge-product-search.json`,
+          "utf8"
+        )
       )
     )
   })
