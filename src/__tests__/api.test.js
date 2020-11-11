@@ -109,3 +109,13 @@ describe("GET /offers?store&name", () => {
     })
   })
 })
+
+describe("GET /static/application.css", () => {
+  it("retrieves styles", async () => {
+    const response = await request(api.callback()).get(
+      "/static/application.css"
+    )
+    expect(response.status).toBe(200)
+    expect(response.text).toMatchSnapshot()
+  })
+})

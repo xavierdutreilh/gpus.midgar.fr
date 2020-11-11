@@ -1,36 +1,45 @@
-extends layout
-block content
-  form
-    input(type="text" name="name" value=query.name required placeholder="Search" aria-label="Name")
-  table
-    thead
-      tr
-        th Store
-        th Name
-        th Price
-        th Status
-    tbody
-      - for (const offer of offers)
-        tr
-          td
-            case offer.store
-              when "ldlc"
-                | LDLC
-              when "materielnet"
-                | Materiel.net
-              when "nvidia"
-                | Nvidia
-          td
-            if offer.url
-              a(href=offer.url target="_blank" rel="noopener noreferrer")= offer.name
-            else
-              = offer.name
-          td= offer.price
-          td
-            case offer.status
-              when "available"
-                | Available
-              when "unavailable"
-                | Unavailable
-              when "unknown"
-                | Unknown
+- const config = require("config")
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    title Offers | #{config.get("name")}
+    link(rel="stylesheet" href="/static/application.css")
+  body
+    main
+      form
+        input(type="text" name="name" value=query.name required placeholder="Search" aria-label="Name")
+      table
+        thead
+          tr
+            th Store
+            th Name
+            th Price
+            th Status
+        tbody
+          - for (const offer of offers)
+            tr
+              td
+                case offer.store
+                  when "ldlc"
+                    | LDLC
+                  when "materielnet"
+                    | Materiel.net
+                  when "nvidia"
+                    | Nvidia
+              td
+                if offer.url
+                  a(href=offer.url target="_blank" rel="noopener noreferrer")= offer.name
+                else
+                  = offer.name
+              td= offer.price
+              td
+                case offer.status
+                  when "available"
+                    | Available
+                  when "unavailable"
+                    | Unavailable
+                  when "unknown"
+                    | Unknown

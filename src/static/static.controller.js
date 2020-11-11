@@ -39,4 +39,7 @@ theme.overrideThemeStyles = () => ({
 
 const typography = new Typography(theme)
 
-module.exports = typography
+exports.stylesheet = async ctx => {
+  ctx.type = "css"
+  ctx.body = typography.toString()
+}
