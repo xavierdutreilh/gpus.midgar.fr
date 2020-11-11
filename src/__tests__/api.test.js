@@ -29,6 +29,16 @@ describe("GET /", () => {
   })
 })
 
+describe("GET /assets/application.css", () => {
+  it("retrieves styles", async () => {
+    const response = await request(api.callback()).get(
+      "/assets/application.css"
+    )
+    expect(response.status).toBe(200)
+    expect(response.text).toMatchSnapshot()
+  })
+})
+
 describe("GET /offers", () => {
   describe("Accept: text/html", () => {
     it("renders offers", async () => {
@@ -107,15 +117,5 @@ describe("GET /offers?store&name", () => {
         },
       ])
     })
-  })
-})
-
-describe("GET /assets/application.css", () => {
-  it("retrieves styles", async () => {
-    const response = await request(api.callback()).get(
-      "/assets/application.css"
-    )
-    expect(response.status).toBe(200)
-    expect(response.text).toMatchSnapshot()
   })
 })
