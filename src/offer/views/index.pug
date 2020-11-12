@@ -10,7 +10,13 @@ html(lang="en")
   body
     main
       form
-        input(type="text" name="name" value=query.name required placeholder="Search" aria-label="Name")
+        input(type="text" name="name" value=query.name placeholder="Search" aria-label="Name")
+        select(name="status" aria-label="Status")
+          option(value="") All statuses
+          option(value="available" selected=query.status === "available") Available
+          option(value="unavailable" selected=query.status === "unavailable") Unavailable
+          option(value="unknown" selected=query.status === "unknown") Unknown
+        button(type="submit") Search
       table
         thead
           tr
