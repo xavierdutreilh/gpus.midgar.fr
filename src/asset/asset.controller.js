@@ -11,7 +11,6 @@ theme.overrideThemeStyles = () => ({
     height: "100%",
     margin: "0 auto",
     maxWidth: "960px",
-    overflowX: "auto",
   },
   main: {
     minWidth: "960px",
