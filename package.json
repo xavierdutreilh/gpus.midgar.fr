@@ -2,7 +2,7 @@
   "name": "gpus.midgar.fr",
   "private": true,
   "description": "The source code to gpus.midgar.fr",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "author": "Xavier Dutreilh <xavier@dutreilh.com>",
   "dependencies": {
     "build-url": "^6.0.1",
