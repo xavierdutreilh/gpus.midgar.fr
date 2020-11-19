@@ -10,6 +10,11 @@ html(lang="en")
   body
     main
       form
+        select(name="store" aria-label="Store")
+          option(value="") All stores
+          option(value="ldlc" selected=query.store === "ldlc") LDLC
+          option(value="materielnet" selected=query.store === "materielnet") Materiel.net
+          option(value="nvidia" selected=query.store === "nvidia") Nvidia
         input(type="text" name="name" value=query.name placeholder="Search" aria-label="Name")
         select(name="status" aria-label="Status")
           option(value="") All statuses
