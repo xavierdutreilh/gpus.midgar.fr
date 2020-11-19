@@ -5,17 +5,19 @@ theme.overrideThemeStyles = () => ({
   body: {
     backgroundColor: "#1e1e1e",
     color: "#fff",
-    margin: "2.4375rem auto",
+    margin: "0 auto",
     maxWidth: "960px",
+    overflowX: "auto",
   },
   main: {
-    margin: "2.4375rem",
+    minWidth: "960px",
+    padding: "2.4375rem",
   },
   form: {
     backgroundColor: "#080808",
     borderRadius: "0.5rem",
     display: "flex",
-    margin: "2.4375rem auto",
+    margin: "0 auto 2.4375rem",
     maxWidth: "640px",
     width: "100%",
   },
@@ -43,7 +45,7 @@ theme.overrideThemeStyles = () => ({
     padding: "1rem",
   },
   table: {
-    margin: "2.4375rem 0",
+    margin: "2.4375rem 0 0",
   },
   "td, th": {
     borderBottom: 0,
