@@ -2,9 +2,13 @@ const Typography = require("typography")
 const theme = require("typography-theme-github")
 
 theme.overrideThemeStyles = () => ({
+  html: {
+    height: "100%",
+  },
   body: {
     backgroundColor: "#1e1e1e",
     color: "#fff",
+    height: "100%",
     margin: "0 auto",
     maxWidth: "960px",
     overflowX: "auto",
